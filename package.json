@@ -1,0 +1,37 @@
+{
+  "author": "Vladimir Barbarosh",
+  "name": "@vbarbarosh/ubuntu-wayland-screencast",
+  "version": "0.0.0",
+  "description": "Making screencasts in Ubuntu on Wayland",
+  "license": "ISC",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "js",
+    "ubuntu",
+    "wayland",
+    "screencast"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "electron-rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbarbarosh/ubuntu-wayland-screencast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vbarbarosh/ubuntu-wayland-screencast/issues"
+  },
+  "homepage": "https://menu.vbarbarosh.com",
+  "dependencies": {
+    "dbus": "^1.0.7",
+    "electron": "^11.2.3"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^2.3.5"
+  }
+}

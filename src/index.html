@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ubuntu Wayland Screencast</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';" />
+    <link href="vendor/sm.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="app">
+    <button v-if="is_screencast_running" v-on:click="click_stop">
+        Stop Screencast
+    </button>
+    <button v-else v-on:click="click_start">
+        Start Screencast
+    </button>
+    <p v-if="is_screencast_running">
+        Screencast Running...
+    </p>
+</div>
+
+<script src="vendor/vue.js"></script>
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        is_screencast_running: false,
+    },
+    methods: {
+        click_start: async function () {
+            await window.gateway.start_screencast();
+            this.is_screencast_running = true;
+        },
+        click_stop: async function () {
+            await window.gateway.stop_screencast();
+            this.is_screencast_running = false;
+        },
+    }
+});
+</script>
+</body>
+</html>

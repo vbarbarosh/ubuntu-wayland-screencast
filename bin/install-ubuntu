@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# http://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin
+# http://redsymbol.net/articles/unofficial-bash-strict-mode/
+set -o nounset -o errexit -o pipefail
+
+script=`realpath $0`
+scriptdir=`dirname $script`
+scriptname=`basename $script`
+
+d=`dirname $scriptdir`
+
+cat > ~/.local/share/applications/quick-launch.desktop << EOF
+[Desktop Entry]
+Encoding=UTF-8
+Value=1.0
+Type=Application
+Name=quick-launch-bannernow-bn
+GenericName=electron
+Comment=electron
+Icon=$d/ubuntu/Electron_Software_Framework_Logo.svg
+Path=$d
+Exec=npm start
+Categories=Utility;
+StartupWMClass=@bannernow/quick-launch
+EOF

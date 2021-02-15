@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Value=1.0
+Type=Application
+Name=ubuntu-wayland-screencast
+GenericName=electron
+Comment=electron
+Icon=/path/to/quick-launch/ubuntu/Electron_Software_Framework_Logo.svg
+Path=/path/to/quick-launch
+Exec=npm start
+Categories=Utility;
+StartupWMClass=ubuntu-wayland-screencast
