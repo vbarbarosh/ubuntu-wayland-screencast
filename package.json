@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/vbarbarosh/ubuntu-wayland-screencast/issues"
   },
-  "homepage": "https://menu.vbarbarosh.com",
+  "homepage": "https://github.com/vbarbarosh/ubuntu-wayland-screencast",
   "dependencies": {
     "dbus": "^1.0.7",
     "electron": "^11.2.3"
